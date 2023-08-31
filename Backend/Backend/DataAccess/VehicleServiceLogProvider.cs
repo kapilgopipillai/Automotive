@@ -6,8 +6,8 @@ namespace Backend.DataAccess
     public class VehicleServiceLogProvider : IVehicleServiceLogProvider
     {
 
-        private readonly AutomotiveContext _context;
-        public VehicleServiceLogProvider(AutomotiveContext context)
+        private readonly UserVehicleContext _context;
+        public VehicleServiceLogProvider(UserVehicleContext context)
         {
             _context = context;
         }

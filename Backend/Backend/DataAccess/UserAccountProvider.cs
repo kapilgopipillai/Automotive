@@ -6,8 +6,8 @@ namespace Backend.DataAccess
     public class UserAccountProvider : IUserAccountProvider
     {
 
-        private readonly AutomotiveContext _context;
-        public UserAccountProvider(AutomotiveContext context)
+        private readonly UserVehicleContext _context;
+        public UserAccountProvider(UserVehicleContext context)
         {
             _context = context;
         }

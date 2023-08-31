@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Model;
 
-public partial class AutomotiveContext : DbContext
+public partial class UserVehicleContext : DbContext
 {
-    public AutomotiveContext()
+    public UserVehicleContext()
     {
     }
 
-    public AutomotiveContext(DbContextOptions<AutomotiveContext> options)
+    public UserVehicleContext(DbContextOptions<UserVehicleContext> options)
         : base(options)
     {
     }

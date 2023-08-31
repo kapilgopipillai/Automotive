@@ -13,7 +13,7 @@ builder.Services.AddCors();
 
 
 var sqlConnectionString = builder.Configuration["ConnectionStrings:PostgreSqlConnectionString"];
-builder.Services.AddDbContext<AutomotiveContext>(options => options.UseNpgsql(sqlConnectionString));
+builder.Services.AddDbContext<UserVehicleContext>(options => options.UseNpgsql(sqlConnectionString));
 
 builder.Services.AddScoped<IUserAccountProvider, UserAccountProvider>();
 builder.Services.AddScoped<IUserVehicleProvider, UserVehicleProvider>();
