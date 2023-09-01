@@ -1,0 +1,21 @@
+<!-- <div fxLayout= "row" fxLayoutGap="80px">
+<div class = "sub-section-1" >aa</div >
+<div class = "sub-section-2" >ss</div >
+</div >
+<div fxLayout="row"> <div class="sub-section-1">dddd</div> <div class="sub-section-2">gggg</div> </div>
+<div fxLayout="row">
+<div class="sub-section-1">bb</div>
+<div class="sub-section-2">bb</div>
+
+<div fxLayoutGap="80px" >mmm</div >
+</div>
+
+<div fxLayout= "row" fxLayoutGap="80px">
+
+  <div class="sub-section-2">lll</div>
+</div> -->
+
+<app-header [userId]="userId" *ngIf="isLogin" [deviceXs]="deviceXs" ></app-header>
+<app-login *ngIf="!isLogin"  (submitEM)="login($event)">Your Form</app-login>
+
+<router-outlet></router-outlet>

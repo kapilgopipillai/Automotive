@@ -1,0 +1,18 @@
+<!-- userProfile-dialog -->
+
+<h1 mat-dialog-title>Wellcome</h1>
+<div mat-dialog-content>
+
+  <div fxLayout="row">
+    <div fxLayout="coloum">
+      {{data.userName}}
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <div fxLayout="coloum">
+      <button mat-flat-button color="primary" (click)="logOut()">Logout</button>
+    </div>
+  </div>
+
+</div>

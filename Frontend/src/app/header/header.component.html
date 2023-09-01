@@ -1,0 +1,87 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Automotive</span>
+      <span class="example-spacer"></span>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon" (click)="openDialog()"
+      >
+        <!-- <mat-icon>menu</mat-icon> -->
+        <img mat-card-avatar src="../../assets/avatar.jpg" />
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<!-- <div>
+  <h1 mat-dialog-title>Favorite Animal</h1>
+  <div mat-dialog-content>
+    My favorite animal is:
+   
+  </div>
+</div> -->
+
+
+<div fxLayout="row" fxLayoutGap="20px">
+  <div fxLayout="coloum">
+    <div class="paddingStyle">
+      <mat-card
+        ><mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div fxLayout="row" fxLayoutGap="20px">
+  <div fxLayout="coloum" class="paddingStyle">
+    <mat-card>
+      <mat-card-content>
+        <div *ngFor="let vehicle of userVehicle">
+          <button
+            mat-fab
+            color="primary"
+            aria-label="Example icon button with a delete icon"
+            (click)="userVehicleChange(vehicle)"
+            matBadge="{{ vehicle.vehicleId }}"
+            matBadgePosition="before"
+            matBadgeColor="accent"
+          >
+            <mat-icon>commute</mat-icon>
+          </button>
+          <br />
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <!-- <br> -->
+  </div>
+  <div fxLayout="coloum" class="paddingStyle">
+    <div>
+      <app-user-vehicle
+        [userVehicleDetails]="userVehicleDetails"
+      ></app-user-vehicle>
+      <app-vehicle-service [vehicleServiceLog]="vehicleServiceLog"></app-vehicle-service>
+      <div class="paddingStyle">
+        <mat-card>
+          <mat-card-content>
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/1ozGKlOzEVc"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
