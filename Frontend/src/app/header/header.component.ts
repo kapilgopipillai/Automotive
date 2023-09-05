@@ -8,6 +8,7 @@ import { NgIf } from '@angular/common';
 import { VehicleServiceLogService } from '../service/vehicle-service-log.service';
 import { VehicleServiceLog } from '../model/vehicleServiceLog';
 import { Subject } from "rxjs";
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit {
 
   vehicleServiceLog: VehicleServiceLog[] = [];
   userVehicle: UserVehicle[] = [];
+  iframeData: SafeResourceUrl = '';
 
   userAccount: UserAccount = {
     userId: 0,
@@ -39,7 +41,7 @@ export class HeaderComponent implements OnInit {
   };
 
   constructor(public userVehicleService: UserVehicleService, public vehicleServiceLogService: VehicleServiceLogService,
-    public userAccountService: UserAccountService, public dialog: MatDialog) { }
+    public userAccountService: UserAccountService, public dialog: MatDialog, public sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.userAccountService.getUserDetails(this.userId).subscribe(data => {
@@ -53,6 +55,7 @@ export class HeaderComponent implements OnInit {
       console.log(this.userVehicle);
       
       this.userVehicleDetails = this.userVehicle[0];
+      this.iframeData = this.sanitizer.bypassSecurityTrustResourceUrl(this.userVehicle[0].video);
       this.vehicleServiceLogService.GetVehicleServiceLogByVehicleId(this.userVehicle[0].vehicleId).subscribe(data => {
         this.vehicleServiceLog = data;
       });
@@ -61,6 +64,8 @@ export class HeaderComponent implements OnInit {
 
   userVehicleChange(data: UserVehicle): void{
     this.userVehicleDetails = data;
+    this.iframeData = this.sanitizer.bypassSecurityTrustResourceUrl(this.userVehicleDetails.video);
+    console.log(this.iframeData);
     this.vehicleServiceLogService.GetVehicleServiceLogByVehicleId(this.userVehicleDetails.vehicleId).subscribe(data => {
       this.vehicleServiceLog = data;
     });

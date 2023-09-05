@@ -12,7 +12,7 @@ import { UserVehicleService } from './service/user-vehicle.service';
 import { VehicleServiceLogService } from './service/vehicle-service-log.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HeadersInterceptor } from './service/headers.interceptor';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent, UserProfileDialog } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -28,6 +28,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 
 import { TimerService } from './service/timer.service.spec';
@@ -40,7 +42,8 @@ import { LoginComponent } from './login/login.component';
     VehicleServiceComponent,
     UserVehicleComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfileDialog
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,9 @@ import { LoginComponent } from './login/login.component';
     MatDialogModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatInputModule 
+    MatInputModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [
     UserAccountService, 

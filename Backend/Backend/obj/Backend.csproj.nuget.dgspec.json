@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\My Work\\Automotive\\Automotive\\Backend\\Backend\\Backend.csproj": {}
+    "D:\\My Work\\sample\\Automotive\\Backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "D:\\My Work\\Automotive\\Automotive\\Backend\\Backend\\Backend.csproj": {
+    "D:\\My Work\\sample\\Automotive\\Backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\My Work\\Automotive\\Automotive\\Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "D:\\My Work\\sample\\Automotive\\Backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "D:\\My Work\\Automotive\\Automotive\\Backend\\Backend\\Backend.csproj",
+        "projectPath": "D:\\My Work\\sample\\Automotive\\Backend\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\1047618\\.nuget\\packages\\",
-        "outputPath": "D:\\My Work\\Automotive\\Automotive\\Backend\\Backend\\obj\\",
+        "outputPath": "D:\\My Work\\sample\\Automotive\\Backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1047618\\AppData\\Roaming\\NuGet\\NuGet.Config",

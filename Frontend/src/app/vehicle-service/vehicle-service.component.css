@@ -5,3 +5,9 @@ table {
 .paddingStyle{
     padding: 10px;
 }
+
+.menuButtonStyle{
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+}

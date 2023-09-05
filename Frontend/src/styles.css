@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #4891eb;
+  background-image: url("../src/assets/car3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.example-card-style {
+  max-width: 400px;
+  box-shadow: none !important;
+}
+
+.example-header-image-style {
+  /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+  background-image: url("../src/assets/avatar.jpg");
+  background-size: cover;
+}
+
+.logoutStyle {
+  cursor: pointer;
+  color: red;
+}

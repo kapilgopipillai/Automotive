@@ -1,12 +1,13 @@
 <div>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Automotive</span>
+      <span>User Service Manager</span>
       <span class="example-spacer"></span>
       <button
         mat-icon-button
         class="example-icon"
-        aria-label="Example icon-button with menu icon" (click)="openDialog()"
+        aria-label="Example icon-button with menu icon"
+        (click)="openDialog()"
       >
         <!-- <mat-icon>menu</mat-icon> -->
         <img mat-card-avatar src="../../assets/avatar.jpg" />
@@ -23,39 +24,45 @@
   </div>
 </div> -->
 
-
-<div fxLayout="row" fxLayoutGap="20px">
-  <div fxLayout="coloum">
-    <div class="paddingStyle">
-      <mat-card
+<div fxLayout="row"  class="rowStyle">
+  <div fxLayout="coloum" class="columWidth">
+    <div class="paddingAndWidthStyle">
+      <mat-card class="scroolingDataMatCardStyle"
         ><mat-card-content>
-          <p>
+          <!-- <p>
             The Shiba Inu is the smallest of the six original and distinct spitz
             breeds of dog from Japan. A small, agile dog that copes very well
             with mountainous terrain, the Shiba Inu was originally bred for
             hunting.
-          </p>
+          </p> -->
+          <marquee direction="left" class="marqeStyle" scrolldelay="100" behavior="loop">
+            Morgan Stanley maintained an overweight rating on Maruti Suzuki with a target price of Rs 11,963. The brokerage firm expects a higher average selling price (ASP) owing to an increase in the SUV mix.
+          </marquee>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 </div>
 
-<div fxLayout="row" fxLayoutGap="20px">
+<div fxLayout="row" fxLayoutGap="20px" class="rowStyle">
   <div fxLayout="coloum" class="paddingStyle">
     <mat-card>
       <mat-card-content>
-        <div *ngFor="let vehicle of userVehicle">
+        <div *ngFor="let vehicle of userVehicle" class="sidepaddingStyle">
           <button
-            mat-fab
+            mat-raised-button
             color="primary"
-            aria-label="Example icon button with a delete icon"
+            class="sideMenuStyle"
+            [class.selected]="vehicle === userVehicleDetails"
             (click)="userVehicleChange(vehicle)"
-            matBadge="{{ vehicle.vehicleId }}"
-            matBadgePosition="before"
+            matBadge="{{ vehicle.rcnumber }}"
+            matBadgePosition="after"
             matBadgeColor="accent"
+            MatBadgeSize="large"
           >
+          <div matBadge="{{ vehicle.vehicleId }}" matBadgeColor="accent" matBadgePosition="before" matBadgeColor="accent" class="badgeStyle">
             <mat-icon>commute</mat-icon>
+            </div>
           </button>
           <br />
         </div>
@@ -63,25 +70,101 @@
     </mat-card>
     <!-- <br> -->
   </div>
-  <div fxLayout="coloum" class="paddingStyle">
-    <div>
+  <div fxLayout="coloum" class="paddingStyle columWidth">
+  <!-- <div fxLayout="coloum" > -->
+
+    
+    <div fxLayout="row" fxLayoutGap="20px" class="columWidth">
+      <div fxLayout="coloum" class="displayStyle columWidth">
+        <div fxLayout="row" >
+          <app-user-vehicle class="columWidth"
+            [userVehicleDetails]="userVehicleDetails"
+          ></app-user-vehicle>
+        </div>
+        <div fxLayout="row" >
+          <app-vehicle-service class="columWidth"
+            [vehicleServiceLog]="vehicleServiceLog"
+          ></app-vehicle-service>
+        </div>
+        <div fxLayout="row" >
+          <div class="paddingStyle columWidth">
+            <mat-card>
+              <mat-card-content>
+                <iframe
+                  width="100%"
+                  height="315"
+                  [src]="iframeData"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div fxLayout="row" fxLayoutGap="20px">
+      <div fxLayout="coloum">
+        <app-user-vehicle
+          [userVehicleDetails]="userVehicleDetails"
+        ></app-user-vehicle>
+      </div>
+    </div>
+    
+    <div fxLayout="row" fxLayoutGap="20px">
+      <div fxLayout="coloum">
+        <app-vehicle-service
+          [vehicleServiceLog]="vehicleServiceLog"
+        ></app-vehicle-service>
+      </div>
+    </div>
+    
+    <div fxLayout="row" fxLayoutGap="20px">
+      <div fxLayout="coloum">
+        <div class="paddingStyle">
+          <mat-card>
+            <mat-card-content>
+              <iframe
+                width="100%"
+                height="315"
+                [src]="iframeData"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div>
       <app-user-vehicle
         [userVehicleDetails]="userVehicleDetails"
       ></app-user-vehicle>
-      <app-vehicle-service [vehicleServiceLog]="vehicleServiceLog"></app-vehicle-service>
+      <app-vehicle-service
+        [vehicleServiceLog]="vehicleServiceLog"
+      ></app-vehicle-service>
       <div class="paddingStyle">
         <mat-card>
           <mat-card-content>
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/1ozGKlOzEVc"
+              [src]="iframeData"
+              title="YouTube video player"
               frameborder="0"
               allowfullscreen
             ></iframe>
           </mat-card-content>
         </mat-card>
       </div>
-    </div>
+    </div> -->
+
+
   </div>
 </div>
+
+<!-- src="https://www.youtube.com/embed/fjyKx18S5SU?si=b6Kq_CfkSnDXFwgB?autoplay=1&mute=1" -->

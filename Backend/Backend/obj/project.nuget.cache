@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7vjMlo07lmqK+bkohCWd3lciK5rQjxQ+kYxMrhbD52Q2FjWRtVYcjo3Y2BaDmriaIC5dTMY5/FzYcAQBaGhIZA==",
+  "dgSpecHash": "kCGPu0YAdyvtx467deEY5fuF8k+2V4duNK+VA8W8K2c1E+mBRs3EINff7FuabLCTpftAO4Lq1X2HCmJkALylVQ==",
   "success": true,
-  "projectFilePath": "D:\\My Work\\Automotive\\Automotive\\Backend\\Backend\\Backend.csproj",
+  "projectFilePath": "D:\\My Work\\sample\\Automotive\\Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1047618\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\1047618\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

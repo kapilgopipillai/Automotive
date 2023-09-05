@@ -17,16 +17,6 @@
           <div fxLayout="coloum">
             <h3>Counter: {{ counter }}</h3>
           </div>
-          <div fxLayout="coloum">
-            <button mat-flat-button color="primary" (click)="startTimer()">
-              Start
-            </button>
-          </div>
-          <div fxLayout="coloum">
-            <button mat-flat-button color="primary" (click)="stopTimer()">
-              Stop
-            </button>
-          </div>
         </div>
       </td>
     </ng-container>
@@ -48,7 +38,7 @@
           [matMenuTriggerFor]="menu"
           aria-label="Example icon-button with a menu"
         >
-          <mat-icon>more_vert</mat-icon>
+          <mat-icon class="menuButtonStyle">view_headline</mat-icon>
         </button>
       </td>
     </ng-container>
@@ -57,17 +47,17 @@
   </table>
 
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
+    <button mat-menu-item (click)="startTimer()">
+      <mat-icon>play_arrow</mat-icon>
+      <span>Start</span>
     </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
+    <button mat-menu-item (click)="stopTimer()">
+      <mat-icon>stop</mat-icon>
+      <span>Stop</span>
     </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
+    <button mat-menu-item (click)="stopTimer()">
+      <mat-icon>pause</mat-icon>
+      <span>Pause</span>
     </button>
   </mat-menu>
 </div>
